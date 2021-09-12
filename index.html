@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <title>Cps Test</title>
     <script src="scripts.js" type="text/javascript"></script>
-</head>
+    <link rel="stylesheet" href="styles.css">
+</head> 
 <body onload="start()">
-    <button id="buttonStart" onclick="cpsTestStart()"><div>Press the button to start the 5 seconds CPS test</div></button>
-    <button id="buttonLoad" onclick="cpsTestLoad()">Click as fast as posible for five seconds</button>
-    <button id="buttonFinish" onclick="cpsTestStartAgain()">Reset the CPS test results and start again the 5 seconds CPS test</button>
-    <div id="clicks"><br></div>
-    <div id=cpsFinal><br/></div>
-    <div id=countdown></div>
+    <section>
+        <header>Header</header>
+    </section>
+    <section>
+        <div id="cpsButtonContainer">
+            <button id="buttonStart" onclick="cpsTestStart()">Press the button to start the 5 seconds CPS test</button>
+            <button id="buttonLoad" onclick="cpsTestLoad()">Click as fast as posible for five seconds</button>
+            <button id="buttonFinish" onclick="cpsTestStartAgain()">Reset the CPS test results and start again the 5 seconds CPS test</button>
+        </div>
+    </section>
+    <section>
+        <div id="testInfoContainer">
+            <div class="testInfo" id="clicks"><br></div>
+            <div class="testInfo" id=cpsFinal><br/></div>
+            <div class="testInfo" id=countdown></div>
+    </section>
+    <section>
+        <div id="footerContainer">
+            <footer>
+                <ul>
+                    <li>Nicolás Bisman 2021</li>
+                    <li><a href="https://github.com/nicobisman/cpsTest">GitHub</a></li>
+                </ul>
+            </footer>
+        </div>
+    </section>
 </body>
 </html>
