@@ -12,9 +12,9 @@ body {
     text-align: center;
 }
 #cpsButtonContainer button {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    padding: 2%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 10%;
     width: 90%;
     height: 40%;
     border: 1px solid black;
