@@ -4,16 +4,16 @@ function start(){
     document.getElementById("buttonStart").style.display = "none"
     document.getElementById("buttonLoad").style.display = "none"
     document.getElementById("buttonFinish").style.display = "none"
-    document.getElementById("testInfoContainer").style.display = "none"
+    document.getElementById("cpsTestInfoContainer").style.display = "none"
     document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
     window.seconds = seconds
     document.getElementById("cpsResult").innerHTML = "Your final CPS are 0"
     document.getElementById("clicksResult").innerHTML = "Clicks: 0"
     window.clicks = 0
-    document.getElementById("secondsInputButton").value = ""
+    document.getElementById("secondsInputDeterminator").value = ""
 }
 function secondsDeterminator(){
-    window.secondsCheck = document.getElementById("secondsInputButton").value
+    window.secondsCheck = document.getElementById("secondsInputDeterminator").value
     if(secondsCheck > 0 && Number.isInteger(eval(secondsCheck))){
         secondsDeterminatorFolowing()
     } else {
@@ -22,10 +22,10 @@ function secondsDeterminator(){
     }
 }
 function secondsDeterminatorFolowing(){
-    window.seconds = document.getElementById("secondsInputButton").value
+    window.seconds = document.getElementById("secondsInputDeterminator").value
     window.nonVariableSeconds = seconds
     document.getElementById("buttonStart").style.display = "inline"
-    document.getElementById("testInfoContainer").style.display = "inline"
+    document.getElementById("cpsTestInfoContainer").style.display = "inline"
     document.getElementById("secondsDeterminatorContainer").style.display = "none"
     document.getElementById("buttonStart").innerHTML = "Press the button to start the " + seconds + " seconds CPS test"
     document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"

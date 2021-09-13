@@ -12,23 +12,23 @@
     </section>
     <section id="secondsDeterminatorContainer">
         <div id="secondsDeterminatorContainer">
-            <div id="question">How much seconds do you want for the test?</div>
-            <input id="secondsInputButton" type="number" placeholder="5" min="0" step="1" autofocus>
+            <div id="secondsQuestionDeterminator">How much seconds do you want for the test?</div>
+            <input id="secondsInputDeterminator" type="number" placeholder="5" min="0" step="1" autofocus>
             <button id="secondsButtonDeterminator" onclick="secondsDeterminator()">Confirm</button>
         </div>
-    </section>
-    <section>
-        <div id="cpsButtonContainer">
+    </section> 
+    <section id="cpsButtonContainer">
+        <div>
             <button id="buttonStart" onclick="cpsTestStart()"></button>
             <button id="buttonLoad" onclick="cpsTestLoad()"></button>
             <button id="buttonFinish" onclick="start()">Reset the CPS test results and choose again the CPS test seconds</button>
         </div>
     </section>
-    <section id="testInfoContainer">
-        <div id="testInfoContainer">
-            <div class="testInfo" id="clicksResult"><br></div>
-            <div class="testInfo" id=cpsResult><br/></div>
-            <div class="testInfo" id=countdown></div>
+    <section id="cpsTestInfoContainer">
+        <div id="cpsTestInfoContainer">
+            <div id="clicksResult"><br></div>
+            <div id=cpsResult><br/></div>
+            <div id=countdown></div>
     </section>
     <section>
         <div>
