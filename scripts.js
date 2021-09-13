@@ -54,11 +54,10 @@ function workingCountdown(){
     window.variableCountdown = setInterval(countdown, 1000)
 }
 function countdown(){
-    if(seconds>1 && seconds !== 0){
+    if(seconds>1){
         window.seconds--
         document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
     } else {
-        document.getElementById("countdown").innerHTML = "You have 0 seconds left"
         clearInterval(variableCountdown)
         setTimeout(function(){cpsTestFinish()}, 50) 
     }
