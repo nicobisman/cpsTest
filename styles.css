@@ -36,10 +36,10 @@ body {
     background-color: lightgray;
     border-bottom: 2px solid black;
 }
-#footerContainer {
+footer {
     background-color: gray;
 }
-#footerContainer li {
+footer li {
     display: inline-block;
     padding: 3% 2%;
 }
@@ -49,7 +49,7 @@ header {
     font-weight: bold;
     background-color: gray;
 }
-#secondsInput {
+#secondsInputButton {
     margin-top: 10%;
     margin-bottom: 10%;
     padding: 10%;

@@ -7,13 +7,13 @@ function start(){
     document.getElementById("testInfoContainer").style.display = "none"
     document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
     window.seconds = seconds
-    document.getElementById("cpsFinal").innerHTML = "Your final CPS are 0"
-    document.getElementById("clicks").innerHTML = "Clicks: 0"
+    document.getElementById("cpsResult").innerHTML = "Your final CPS are 0"
+    document.getElementById("clicksResult").innerHTML = "Clicks: 0"
     window.clicks = 0
-    document.getElementById("secondsInput").value = ""
+    document.getElementById("secondsInputButton").value = ""
 }
 function secondsDeterminator(){
-    window.secondsCheck = document.getElementById("secondsInput").value
+    window.secondsCheck = document.getElementById("secondsInputButton").value
     if(secondsCheck > 0 && Number.isInteger(eval(secondsCheck))){
         secondsDeterminatorFolowing()
     } else {
@@ -22,7 +22,7 @@ function secondsDeterminator(){
     }
 }
 function secondsDeterminatorFolowing(){
-    window.seconds = document.getElementById("secondsInput").value
+    window.seconds = document.getElementById("secondsInputButton").value
     window.nonVariableSeconds = seconds
     document.getElementById("buttonStart").style.display = "inline"
     document.getElementById("testInfoContainer").style.display = "inline"
@@ -37,17 +37,14 @@ function cpsTestStart(){
 }
 function cpsTestLoad(){
     window.clicks++
-    document.getElementById("clicks").innerHTML = "Clicks: " + clicks
+    document.getElementById("clicksResult").innerHTML = "Clicks: " + clicks
 }
 function cpsTestFinish(){
     alert("You have finished the test, click accept to view the results")
     window.cps = clicks/nonVariableSeconds
-    document.getElementById("cpsFinal").innerHTML = "Your final CPS are " + cps
+    document.getElementById("cpsResult").innerHTML = "Your final CPS are " + cps
     document.getElementById("buttonLoad").style.display = "none"
     document.getElementById("buttonFinish").style.display = "inline"
-}
-function cpsTestStartAgain (){
-    start()
 }
 function workingCountdown(){
     document.getElementById("buttonLoad").innerHTML = "Click as fast as posible for " + seconds + " seconds"
