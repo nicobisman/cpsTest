@@ -26,7 +26,6 @@ body {
     text-align: left;
 }
 #testInfoContainer {
-    padding: 5%;
     border-bottom: 2px solid black;
     background-color: lightgray;
 }
@@ -46,4 +45,29 @@ header {
     padding: 5%;
     font-weight: bold;
     background-color: gray;
+}
+#secondsInput {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 10%;
+    width: 30%;
+    height: 40%;
+    font-size: 30px;
+    border: 1px solid black;
+    background-color: darkgrey;
+}
+#secondsButtonDeterminator{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    width: 30%;
+    height: 40%;
+    border: 1px solid black;
+    background-color: darkgray;
+    font-size: 30px;
+}
+#secondsDeterminatorContainer {
+    background-color: lightgray;
+}
+#question {
+    padding-top: 6%;
 }

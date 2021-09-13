@@ -8,16 +8,23 @@
 </head> 
 <body onload="start()">
     <section>
-        <header>Header</header>
+        <header>CPS Test</header>
     </section>
-    <section>
-        <div id="cpsButtonContainer">
-            <button id="buttonStart" onclick="cpsTestStart()">Press the button to start the 5 seconds CPS test</button>
-            <button id="buttonLoad" onclick="cpsTestLoad()">Click as fast as posible for five seconds</button>
-            <button id="buttonFinish" onclick="cpsTestStartAgain()">Reset the CPS test results and start again the 5 seconds CPS test</button>
+    <section id="secondsDeterminatorContainer">
+        <div id="secondsDeterminatorContainer">
+            <div id="question">How much seconds do you want for the test?</div>
+            <input id="secondsInput" type="number" placeholder="5">
+            <button id="secondsButtonDeterminator" onclick="secondsDeterminator()">Confirm</button>
         </div>
     </section>
     <section>
+        <div id="cpsButtonContainer">
+            <button id="buttonStart" onclick="cpsTestStart()"></button>
+            <button id="buttonLoad" onclick="cpsTestLoad()"></button>
+            <button id="buttonFinish" onclick="cpsTestStartAgain()">Reset the CPS test results and choose again the CPS test seconds</button>
+        </div>
+    </section>
+    <section id="testInfoContainer">
         <div id="testInfoContainer">
             <div class="testInfo" id="clicks"><br></div>
             <div class="testInfo" id=cpsFinal><br/></div>
