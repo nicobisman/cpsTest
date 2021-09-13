@@ -23,9 +23,12 @@ body {
 }
 .testInfo {
     padding: 1%;
+    padding-left: 5%;
     text-align: left;
 }
 #testInfoContainer {
+    padding-top: 5%;
+    padding-bottom: 5%;
     border-bottom: 2px solid black;
     background-color: lightgray;
 }
