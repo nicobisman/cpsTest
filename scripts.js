@@ -13,6 +13,15 @@ function start(){
     document.getElementById("secondsInput").value = ""
 }
 function secondsDeterminator(){
+    window.secondsCheck = document.getElementById("secondsInput").value
+    if(secondsCheck > 0 && Number.isInteger(eval(secondsCheck))){
+        secondsDeterminatorFolowing()
+    } else {
+        alert("The number must be a positive integer")
+        start()
+    }
+}
+function secondsDeterminatorFolowing(){
     window.seconds = document.getElementById("secondsInput").value
     window.nonVariableSeconds = seconds
     document.getElementById("buttonStart").style.display = "inline"
