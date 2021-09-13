@@ -14,20 +14,12 @@ function start(){
 }
 function secondsDeterminator(){
     window.seconds = document.getElementById("secondsInput").value
-    if(seconds <= 0){
-        alert("The number must be positve and integer")
-        start()
-    } else if (parseInt(seconds) !== seconds){
-        alert("The number must be positve and integer")
-        start()
-    } else {
-        window.nonVariableSeconds = seconds
-        document.getElementById("buttonStart").style.display = "inline"
-        document.getElementById("testInfoContainer").style.display = "inline"
-        document.getElementById("secondsDeterminatorContainer").style.display = "none"
-        document.getElementById("buttonStart").innerHTML = "Press the button to start the " + seconds + " seconds CPS test"
-        document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
-    }
+    window.nonVariableSeconds = seconds
+    document.getElementById("buttonStart").style.display = "inline"
+    document.getElementById("testInfoContainer").style.display = "inline"
+    document.getElementById("secondsDeterminatorContainer").style.display = "none"
+    document.getElementById("buttonStart").innerHTML = "Press the button to start the " + seconds + " seconds CPS test"
+    document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
 }
 function cpsTestStart(){
     document.getElementById("buttonStart").style.display = "none"
