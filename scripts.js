@@ -18,12 +18,11 @@ function start(){
     window.clicks = 0
 }
 function secondsDeterminator(){
-    //Define a variable to check if the seconds number selected are postive integer number
-        window.secondsCheck = document.getElementById("secondsInputDeterminator").value
+    //Define the seconds according to the seconds selected
+    window.seconds = document.getElementById("secondsInputDeterminator").value
     //CHECK IF SECONDS IS AN INTEGER POSITIVE NUMBER
-    if(secondsCheck > 0 && Number.isInteger(eval(secondsCheck))){
+    if(seconds > 0 && Number.isInteger(eval(seconds))){
         //IF YES
-        //Define the seconds according to the seconds selected
         window.seconds = document.getElementById("secondsInputDeterminator").value
         //define non variable seconds as equal to variable seconds
         window.nonVariableSeconds = seconds
