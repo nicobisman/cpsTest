@@ -8,8 +8,8 @@ function start(){
     //Manage the cps test info container display
     document.getElementById("cpsTestInfoContainer").style.display = "none"
     //Start/reset the cps test info results texts
-    document.getElementById("cpsResult").innerHTML = "Your final CPS are 0"
-    document.getElementById("clicksResult").innerHTML = "Clicks: 0"
+    document.getElementById("cpsResultTestInfo").innerHTML = "Your final CPS are 0"
+    document.getElementById("clicksTestInfo").innerHTML = "Clicks: 0"
     //Reset the seconds input determinator value
     document.getElementById("secondsInputDeterminator").value = ""
     //Reset the clicks variable
@@ -29,8 +29,8 @@ function secondsDeterminator(){
         document.getElementById("cpsTestInfoContainer").style.display = "inline"
         //Manage the seconds determinator container display
         document.getElementById("secondsDeterminatorContainer").style.display = "none"
-        //Change the countdown text according to seconds determinated
-        document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
+        //Change the countdown test info text according to seconds determinated
+        document.getElementById("countdownTestInfo").innerHTML = "You have " + seconds + " seconds left"
         //Change the button text according to seconds determinated
         document.getElementById("cpsButtonStart").innerHTML = "Press the button to start the " + seconds + " seconds CPS test"
     } else {
@@ -54,7 +54,7 @@ function cpsTestLoad(){
     //Add one to the click variable by every click 
     window.clicks++
     //Print the click added to the variable in clicks result text
-    document.getElementById("clicksResult").innerHTML = "Clicks: " + clicks
+    document.getElementById("clicksTestInfo").innerHTML = "Clicks: " + clicks
 }
 function workingCountdown(){
     //Set an interval that call the countdown function every second
@@ -66,13 +66,13 @@ function countdown(){
         //IF YES
         //Substract one to the seconds variable
         window.seconds--
-        //Change the countdown text according to seconds left
-        document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
+        //Change the countdown test info text according to seconds left
+        document.getElementById("countdownTestInfo").innerHTML = "You have " + seconds + " seconds left"
     } else {
         //IF NO
-        //Notify the user that they ran out of time by changing the countdown text
-        document.getElementById("countdown").innerHTML = "You have 0 seconds left"
-        //Wait fifty miliseconds until call cps test finish function so the countdown text can change before the alert is displayed
+        //Notify the user that they ran out of time by changing the countdown test info text
+        document.getElementById("countdownTestInfo").innerHTML = "You have 0 seconds left"
+        //Wait fifty miliseconds until call cps test finish function so the countdown test info text can change before the alert is displayed
         setTimeout(function(){cpsTestFinish()}, 50) 
         //Stop the countdown repeat
         clearInterval(variableCountdown)
@@ -84,7 +84,7 @@ function cpsTestFinish(){
     //Calculate the cps by dividing the clicks over the seconds selected
     window.cps = clicks/nonVariableSeconds
     //Print the cps test results in cps result
-    document.getElementById("cpsResult").innerHTML = "Your final CPS are " + cps
+    document.getElementById("cpsResultTestInfo").innerHTML = "Your final CPS are " + cps
     //Manage the cps buttons display
     document.getElementById("cpsButtonLoad").style.display = "none"
     document.getElementById("cpsButtonFinish").style.display = "inline"
