@@ -2,9 +2,9 @@ function start(){
     //Define the variables seconds variable
     window.seconds = Number
     //Manage the cps test buttons display 
-    document.getElementById("buttonStart").style.display = "none"
-    document.getElementById("buttonLoad").style.display = "none"
-    document.getElementById("buttonFinish").style.display = "none"
+    document.getElementById("cpsButtonStart").style.display = "none"
+    document.getElementById("cpsButtonLoad").style.display = "none"
+    document.getElementById("cpsButtonFinish").style.display = "none"
     //Manage the seconds determinator container display
     document.getElementById("secondsDeterminatorContainer").style.display = "inline"
     //Manage the cps test info container display
@@ -27,29 +27,29 @@ function secondsDeterminator(){
         //define non variable seconds as equal to variable seconds
         window.nonVariableSeconds = seconds
         //Manage the cps test buttons diplay 
-        document.getElementById("buttonStart").style.display = "inline"
+        document.getElementById("cpsButtonStart").style.display = "inline"
         //Manage the cps test info container display
         document.getElementById("cpsTestInfoContainer").style.display = "inline"
         //Manage the seconds determinator container display
         document.getElementById("secondsDeterminatorContainer").style.display = "none"
-        //Change countdown text according to seconds determinated
+        //Change the countdown text according to seconds determinated
         document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
-        //Change button text according to seconds determinated
-        document.getElementById("buttonStart").innerHTML = "Press the button to start the " + seconds + " seconds CPS test"
+        //Change the button text according to seconds determinated
+        document.getElementById("cpsButtonStart").innerHTML = "Press the button to start the " + seconds + " seconds CPS test"
     } else {
         //IF NO
         //Alert the user that the number must be a positive integer number
         alert("The number must be a positive integer number")
-        //Start again
+        //Start again everything by calling the start function
         start()
     }
 }
 function cpsTestStart(){
-    //Change button text according to seconds
-    document.getElementById("buttonLoad").innerHTML = "Click as fast as posible for " + seconds + " seconds"
-    //Manage buttons display
-    document.getElementById("buttonStart").style.display = "none"
-    document.getElementById("buttonLoad").style.display = "inline"
+    //Change the button text according to seconds
+    document.getElementById("cpsButtonLoad").innerHTML = "Click as fast as posible for " + seconds + " seconds"
+    //Manage the buttons display
+    document.getElementById("cpsButtonStart").style.display = "none"
+    document.getElementById("cpsButtonLoad").style.display = "inline"
     //Start the countdown by calling to the function working countdown
     workingCountdown()
 }
@@ -89,6 +89,6 @@ function cpsTestFinish(){
     //Print the cps test results in cps result
     document.getElementById("cpsResult").innerHTML = "Your final CPS are " + cps
     //Manage the cps buttons display
-    document.getElementById("buttonLoad").style.display = "none"
-    document.getElementById("buttonFinish").style.display = "inline"
+    document.getElementById("cpsButtonLoad").style.display = "none"
+    document.getElementById("cpsButtonFinish").style.display = "inline"
 }
