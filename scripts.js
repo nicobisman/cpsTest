@@ -60,7 +60,7 @@ function cpsTestLoad(){
     document.getElementById("clicksResult").innerHTML = "Clicks: " + clicks
 }
 function workingCountdown(){
-    //Set an interval that call the countdown variable every second
+    //Set an interval that call the countdown function every second
     window.variableCountdown = setInterval(countdown, 1000)
 }
 function countdown(){
