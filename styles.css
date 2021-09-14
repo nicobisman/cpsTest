@@ -6,25 +6,18 @@
     font-size: 30px;
     text-align: center;
 }
-body {
-    width: 50%;
-    height: 50%;
-    margin: 5% auto;
-    border: 2px solid black;
-}
-/* Input */
+/* Affects all page inputs */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
     margin: 0; 
 }
-/* Footer*/
-footer {
-    background-color: gray;
-}
-footer li {
-    display: inline-block;
-    padding: 3% 2%;
+/* Body */
+body {
+    width: 50%;
+    height: 50%;
+    margin: 5% auto;
+    border: 2px solid black;
 }
 /* Header */
 header {
@@ -34,6 +27,9 @@ header {
     background-color: gray;
 }
 /* Seconds determinator */
+#secondsDeterminatorContainer div {
+    background-color: lightgray;
+}
 #secondsQuestionDeterminator {
     padding-top: 6%;
     padding-left: 1%;
@@ -57,8 +53,19 @@ header {
     border: 2px solid black;
     background-color: darkgray;
 }
-#secondsDeterminatorContainer div{
+/* Cps test variable button */
+#cpsButtonContainer {
     background-color: lightgray;
+    border-bottom: 2px solid black;
+}
+#cpsButtonContainer button {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 10%;
+    width: 90%;
+    height: 40%;
+    border: 2px solid black;
+    background-color: darkgray;
 }
 /* Cps test info */
 #cpsTestInfoContainer div {
@@ -73,17 +80,11 @@ header {
     text-align: left;
     list-style-type: none;
 }
-/* Cps test variable button */
-#cpsButtonContainer {
-    background-color: lightgray;
-    border-bottom: 2px solid black;
+/* Footer*/
+footer {
+    background-color: gray;
 }
-#cpsButtonContainer button {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    padding: 10%;
-    width: 90%;
-    height: 40%;
-    border: 2px solid black;
-    background-color: darkgray;
+footer li {
+    display: inline-block;
+    padding: 3% 2%;
 }
