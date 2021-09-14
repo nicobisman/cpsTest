@@ -76,7 +76,7 @@ function countdown(){
         //IF NO
         //Notify the user that they ran out of time by changing the countdown text
         document.getElementById("countdown").innerHTML = "You have 0 seconds left"
-        //Let pass fifty miliseconds so the countdown text can change before the alert is played
+        //Wait fifty miliseconds unitl call cps test finish function so the countdown text can change before the alert is played
         setTimeout(function(){cpsTestFinish()}, 50) 
         //Stop the countdown repeat
         clearInterval(variableCountdown)
