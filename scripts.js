@@ -1,6 +1,4 @@
 function start(){
-    //Define the variables seconds variable
-    window.seconds = Number
     //Manage the cps test buttons display 
     document.getElementById("cpsButtonStart").style.display = "none"
     document.getElementById("cpsButtonLoad").style.display = "none"
@@ -23,8 +21,7 @@ function secondsDeterminator(){
     //CHECK IF SECONDS IS AN INTEGER POSITIVE NUMBER
     if(seconds > 0 && Number.isInteger(eval(seconds))){
         //IF YES
-        window.seconds = document.getElementById("secondsInputDeterminator").value
-        //define non variable seconds as equal to variable seconds
+        //Define non variable seconds as equal to variable seconds
         window.nonVariableSeconds = seconds
         //Manage the cps test buttons diplay 
         document.getElementById("cpsButtonStart").style.display = "inline"
@@ -40,7 +37,7 @@ function secondsDeterminator(){
         //IF NO
         //Alert the user that the number must be a positive integer number
         alert("The number must be a positive integer number")
-        //Start again everything by calling the start function
+        //Start again by calling the start function
         start()
     }
 }
@@ -67,7 +64,7 @@ function countdown(){
     //CHECK IF SECONDS IS BIGGER THAN ONE
     if(seconds>1){
         //IF YES
-        //Substract 1 to the seconds variable
+        //Substract one to the seconds variable
         window.seconds--
         //Change the countdown text according to seconds left
         document.getElementById("countdown").innerHTML = "You have " + seconds + " seconds left"
@@ -75,7 +72,7 @@ function countdown(){
         //IF NO
         //Notify the user that they ran out of time by changing the countdown text
         document.getElementById("countdown").innerHTML = "You have 0 seconds left"
-        //Wait fifty miliseconds unitl call cps test finish function so the countdown text can change before the alert is displayed
+        //Wait fifty miliseconds until call cps test finish function so the countdown text can change before the alert is displayed
         setTimeout(function(){cpsTestFinish()}, 50) 
         //Stop the countdown repeat
         clearInterval(variableCountdown)
